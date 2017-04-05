@@ -5,7 +5,7 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PizzaOrderForm", "PizzaOrderForm\PizzaOrderForm.csproj", "{F66B7A7F-6DF4-4ADF-836C-29A6A13E1C35}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Calculator", "..\..\..\..\Desktop\Calculator\Calculator\Calculator.csproj", "{CBC65D17-7026-422E-84A0-8BE266FA1376}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Calculator", "CAlculator\Calculator\Calculator.csproj", "{CBC65D17-7026-422E-84A0-8BE266FA1376}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

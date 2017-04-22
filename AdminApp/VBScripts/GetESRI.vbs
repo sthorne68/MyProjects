@@ -37,11 +37,7 @@ For each comp in arrayComputers
 
    Set colListOfServices = objWMIService.ExecQuery _
    ("Select * from Win32_Service where caption like 'ArcSde%' "_
-    & "or caption like 'OracleService%'" _
-    & "or caption like 'Oracle%TNS%'" _
-    & "or caption like 'PostgreSQL%'" _
-    & "or caption like 'SQL Server%'" _
-    & "or caption like 'DB2 - %'")
+    & "or caption like '%ArcGIS%'")
    
    ' WMI and VBScript loop
    strServiceList = strServiceList & "<h1>" & comp &"</h1><table>" _

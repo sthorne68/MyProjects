@@ -44,6 +44,8 @@ namespace AdminApp
         {
             resetOSAdminRadio();
             btnExecute.Enabled = false;
+            txtEZCONNECT.Text = "";
+            txtSysPassword.Text = "";
         }
 
 
@@ -58,6 +60,13 @@ namespace AdminApp
             btnExecute.Enabled = true;
             VBFile = "GetSoftware.vbs";
             //VBFile = "GetSoftware_HTML.vbs";
+        }
+
+
+        private void rdoESRIServices_CheckedChanged(object sender, EventArgs e)
+        {
+            btnExecute.Enabled = true;
+            VBFile = "GetESRI.vbs";
         }
 
         private void rdoGetDBMS_CheckedChanged(object sender, EventArgs e)
@@ -87,11 +96,12 @@ namespace AdminApp
 
         private void btnExecute_Click(object sender, EventArgs e)
         {
+
             /// http://stackoverflow.com/questions/200422/how-to-call-a-vbscript-file-in-a-c-sharp-application    
             //Process.Start(string.Format((@"cscript //B //Nologo C:\Users\shaw3369\Documents\Visual Studio 2015\Projects\PizzaOrderForm\AdminApp\VBScripts\{0}"), VBFile)); 
             System.Diagnostics.Process process = new System.Diagnostics.Process();
          //   string wk = process.StartInfo.WorkingDirectory = "C:\\Users\\shaw3369\\Documents\\Visual Studio 2015\\Projects\\PizzaOrderForm\\AdminApp\\VBScripts\\";
-            process.StartInfo.FileName = @"Scripts\" + VBFile;
+            process.StartInfo.FileName = @"VBScripts\" + VBFile;
             //process.StartInfo.Arguments = txtMachineName.Text;
             process.Start();
 
@@ -115,5 +125,45 @@ namespace AdminApp
             btnClear_Click(sender, e);
             btnExecute.Enabled = false;
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            for (int i = 0; i < 10; i ++ )
+            {
+
+                ListViewItem l = listView1.Items.Add("FondDuLac" + i); 
+            l.SubItems.Add(i % 2 == 0 ? "Mounted" : "Started");
+
+            }
+        }
+
+        private void toolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void toolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tabPage2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnConnect_Click(object sender, EventArgs e)
+        {
+            if (txtEZCONNECT.Text == "" || txtSysPassword.Text == "")
+            {
+                MessageBox.Show("The EZCONNECT syntax and the SYS User Password are both required.");
+            }
+            else
+            {
+                MessageBox.Show("Both boxes were entered!!");
+
+            }
+        }
+
     }
 }

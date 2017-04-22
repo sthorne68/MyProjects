@@ -79,6 +79,15 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="VBScripts\AddAdmin.vbs" />
+    <Content Include="VBScripts\GetDBMS.vbs" />
+    <Content Include="VBScripts\GetSoftware.vbs" />
+    <Content Include="VBScripts\RebootWin.vbs" />
+    <Content Include="VBScripts\RemoteConnection.vbs" />
+    <Content Include="VBScripts\ServicesList.html" />
+    <Content Include="VBScripts\WinVer.vbs" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
